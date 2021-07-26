@@ -18,7 +18,7 @@ Para limpar o carrinho, deve-se rodar `localStore.clear()` no console do navegad
 ## Como instalar e execultar localmente
 Deve-se rodar o seguintes comandos em um terminal com git e nodeJS instalados.
 
-`
+```console
 git clone https://github.com/RicardoAndradeM/hiring-coders-desafio-2.git
 
 cd hiring-coders-desafio-2
@@ -26,7 +26,7 @@ cd hiring-coders-desafio-2
 npm i
 
 npm run start
-`
+```
 
 Depois pode-se acessar o endereço [http://localhost:3000](http://localhost:3000) para visulisação no browser.
 
