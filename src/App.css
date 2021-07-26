@@ -81,6 +81,11 @@ header {
     border-radius: 10px;
 }
 
+.shop-button:hover{
+    cursor: pointer;
+    border: solid 1px #000000;
+}
+
 .Product-price::before{
     content: "R$ ";
 }

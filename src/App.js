@@ -16,7 +16,8 @@ function App() {
     if (cartContent !== null) {
       setCart(cartContent);
     } 
-  },[]);
+    setCartCount(cart.length)
+  },[cart]);
 
   function handleCart(index) {
       let newCart = cart;
