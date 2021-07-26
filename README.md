@@ -27,6 +27,7 @@ npm i
 
 npm run start
 `
+
 Depois pode-se acessar o endereço [http://localhost:3000](http://localhost:3000) para visulisação no browser.
 
 ### Como compilar o projeto
