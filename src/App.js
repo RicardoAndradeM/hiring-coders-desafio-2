@@ -6,6 +6,7 @@ import productData from './productData';
 function App() {
   const [data, setData] = useState([]);
   const [cart, setCart] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
     setData(productData);
@@ -20,6 +21,7 @@ function App() {
       newCart.push(data[index]);
       setCart(newCart);
       localStorage.setItem("cart",JSON.stringify(cart));
+      setCartCount(cart.length)
   }
 
   return (
@@ -31,22 +33,34 @@ function App() {
                   <li className="menu-item"><a href="google.com.br" className="menu-item-link">Inicio</a></li>
                   <li className="menu-item"><a href="google.com.br" className="menu-item-link">Fale Conosco</a></li>
                   <li className="menu-item"><a href="google.com.br" className="menu-item-link">Conta</a></li>
-                  <li className="menu-item"><a href="google.com.br" className="menu-item-link">Carrinho ({cart.length})</a></li>
+                  <li className="menu-item"><a href="google.com.br" className="menu-item-link">Carrinho ({cartCount})</a></li>
           </ul>
         </nav>
       </header>
-      <section>
-        {
-          data.map((product,index) => (
-            <div className='product-cotainer' key={index} >
-              <img src={product.img} className="product-img" alt="imagem do produto" width="100px" max-height="auto"/>
-              <h4 className="product-name" >{product.nome}</h4>
-              <h6 className="Product-price">{product.preco}</h6>
-              <button onClick={ () => handleCart(index) }>Adicionar ao carrinh</button>
-            </div>
-          ))
-        }
-      </section>
+      <main>
+        <section>
+          {
+            data.map((product,index) => (
+              <div className='product-cotainer' key={index} >
+                <img src={product.img} className="product-img" alt="imagem do produto" width="100px" max-height="auto"/>
+                <h4 className="product-name" >{product.nome}</h4>
+                <h6 className="Product-price">{product.preco}</h6>
+                <button onClick={ () => handleCart(index) }>Adicionar ao carrinh</button>
+              </div>
+            ))
+          }
+        </section>
+      </main>
+      <footer>
+        <div class="footer-text footer-text-gap">
+            <p>Desevolvido com &#x1F493 por Ricardo de Andrade Maia.</p>
+            <p >Todos os direitos reservados.</p>
+        </div>
+        <div class="footer-text">
+            <a id="github" href="https://github.com/RicardoAndradeM">Github</a>
+            <a id="linkedin" href="https://www.linkedin.com/in/ricardoandradem/">linkedin</a>
+        </div>
+    </footer>
     </div>
   );
 }
