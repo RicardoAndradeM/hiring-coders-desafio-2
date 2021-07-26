@@ -32,10 +32,10 @@ function App() {
         <img src={logo} className="logo" alt="logo da TECH NERD"/>
         <nav className="nav-bar">
           <ul className="menu">
-                  <li className="menu-item"><a href="google.com.br" className="menu-item-link">Inicio</a></li>
-                  <li className="menu-item"><a href="google.com.br" className="menu-item-link">Fale Conosco</a></li>
-                  <li className="menu-item"><a href="google.com.br" className="menu-item-link">Conta</a></li>
-                  <li className="menu-item"><a href="google.com.br" className="menu-item-link">Carrinho ({cartCount})</a></li>
+                  <li className="menu-item"><a href="/" className="menu-item-link">Inicio</a></li>
+                  <li className="menu-item"><a href="/" className="menu-item-link">Fale Conosco</a></li>
+                  <li className="menu-item"><a href="/" className="menu-item-link">Conta</a></li>
+                  <li className="menu-item"><a href="/" className="menu-item-link">Carrinho ({cartCount})</a></li>
           </ul>
         </nav>
       </header>
@@ -47,7 +47,7 @@ function App() {
                 <div><img src={product.img} className="product-img" alt="imagem do produto" /></div>
                 <h4 className="product-name" >{product.nome}</h4>
                 <h6 className="Product-price">{product.preco}</h6>
-                <button onClick={ () => handleCart(index) }>Adicionar ao carrinho</button>
+                <button onClick={ () => handleCart(index) } className='shop-button'>Adicionar ao carrinho</button>
               </div>
             ))
           }
