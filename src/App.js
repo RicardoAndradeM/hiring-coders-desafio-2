@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import logo from './images/logo.png';
 import productData from './productData';
+import github from './images/github.png';
+import linkedin from './images/linkedin.png';
 
 function App() {
   const [data, setData] = useState([]);
@@ -38,14 +40,14 @@ function App() {
         </nav>
       </header>
       <main>
-        <section>
+        <section className='section-one'>
           {
             data.map((product,index) => (
               <div className='product-cotainer' key={index} >
-                <img src={product.img} className="product-img" alt="imagem do produto" width="100px" max-height="auto"/>
+                <div><img src={product.img} className="product-img" alt="imagem do produto" /></div>
                 <h4 className="product-name" >{product.nome}</h4>
                 <h6 className="Product-price">{product.preco}</h6>
-                <button onClick={ () => handleCart(index) }>Adicionar ao carrinh</button>
+                <button onClick={ () => handleCart(index) }>Adicionar ao carrinho</button>
               </div>
             ))
           }
@@ -53,12 +55,16 @@ function App() {
       </main>
       <footer>
         <div class="footer-text footer-text-gap">
-            <p>Desevolvido com &#x1F493 por Ricardo de Andrade Maia.</p>
+            <p>Desevolvido com 💓 por Ricardo de Andrade Maia.</p>
             <p >Todos os direitos reservados.</p>
         </div>
         <div class="footer-text">
-            <a id="github" href="https://github.com/RicardoAndradeM">Github</a>
-            <a id="linkedin" href="https://www.linkedin.com/in/ricardoandradem/">linkedin</a>
+            <a href="https://github.com/RicardoAndradeM">
+              <img id="github" src={github} alt="github logo"/>
+            </a>
+            <a href="https://www.linkedin.com/in/ricardoandradem/">
+              <img id="linkedin" src={linkedin} alt="linkedin logo" />  
+            </a>
         </div>
     </footer>
     </div>
