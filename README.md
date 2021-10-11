@@ -4,14 +4,14 @@ Projeto do desafio 2 do treinamento Hiring Coders
 
 ## Link para o site
 
-[https://desafio2-gama.vercel.app/](https://desafio2-gama.vercel.app/)
+[https://hc-ricardo-d2.netlify.app/](https://hc-ricardo-d2.netlify.app/)
 
 ## Descrição
 
 Uma página de e-commerce, feito em ReactJS (utilizando [create-react-app](https://github.com/facebook/create-react-app)) que armazena os dados no localStorage.
 
 ## Como acessar
-O site pode ser acessado por [https://desafio2-gama.vercel.app/](https://desafio2-gama.vercel.app/)
+O site pode ser acessado por [https://hc-ricardo-d2.netlify.app/](https://hc-ricardo-d2.netlify.app/)
 
 Para limpar o carrinho, deve-se rodar `localStore.clear()` no console do navegador.
 
